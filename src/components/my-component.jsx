@@ -10,7 +10,9 @@ export default function MyFirstComponent(){
     return(
         <View>
             <Text style={myStyles.myText}>This is a React-Native component</Text>
-            <Image style={myStyles.myImage} source={ require('../../assets/images/cat.jpg') } />
+            <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />
+            <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />
+            <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />
             <Image style={myStyles.myImage} source={ {uri: 'https://images.dog.ceo/breeds/kelpie/n02105412_7513.jpg'} } />
             <Button title="Say Hello!" onPress={sayHello} />
             <Pressable style={myStyles.myButton} onPress={sayHello}>
