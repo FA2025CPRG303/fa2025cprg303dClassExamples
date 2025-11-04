@@ -13,6 +13,7 @@ export default function HomeScreen() {
         <Text style={{ fontSize: 30, color: 'blue', textAlign: 'center' }}>
           Hello World!
         </Text>
+        <Button title="Go to Counter" onPress={() => nav.navigate('Counter')} />
         <Button title="Go to About" onPress={() => nav.navigate('About')} />
         <MyFirstComponent />
         <View style={ {height:100} }></View>
