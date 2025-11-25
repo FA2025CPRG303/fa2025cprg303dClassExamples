@@ -5,6 +5,7 @@ import AboutScreen from "./src/screens/AboutScreen";
 import ContactScreen from "./src/screens/ContactScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import AdoptionScreen from "./src/screens/AdoptionScreen";
+import GalleryScreen from "./src/screens/GalleryScreen";
 
 
 const RootStack = createNativeStackNavigator( {
@@ -13,7 +14,8 @@ const RootStack = createNativeStackNavigator( {
     About: AboutScreen,
     Contact: ContactScreen,
     Counter: CounterScreen,
-    Adopt: AdoptionScreen
+    Adopt: AdoptionScreen,
+    Gallery: GalleryScreen,
   }
 } );
 
