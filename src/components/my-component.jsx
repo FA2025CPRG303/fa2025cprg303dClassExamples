@@ -1,4 +1,5 @@
 import { Button, Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { useMyTheme } from "../contexts/theme-context";
 
 
 export default function MyFirstComponent(){
@@ -6,10 +7,11 @@ export default function MyFirstComponent(){
     function sayHello(){
         alert('Hello World!');
     }
+    const {themeStyles} = useMyTheme();
 
     return(
         <View>
-            <Text style={myStyles.myText}>This is a React-Native component</Text>
+            <Text style={[myStyles.myText, themeStyles.text]}>This is a React-Native component</Text>
             <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />
             <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />
             <Image style={myStyles.myImage} source={ require('../assets/images/cat.jpg') } />

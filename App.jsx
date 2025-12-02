@@ -1,14 +1,16 @@
-import { createStaticNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./src/screens/HomeScreen";
-import AboutScreen from "./src/screens/AboutScreen";
-import ContactScreen from "./src/screens/ContactScreen";
-import CounterScreen from "./src/screens/CounterScreen";
-import AdoptionScreen from "./src/screens/AdoptionScreen";
-import GalleryScreen from "./src/screens/GalleryScreen";
+import { createStaticNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/screens/HomeScreen';
+import AboutScreen from './src/screens/AboutScreen';
+import ContactScreen from './src/screens/ContactScreen';
+import CounterScreen from './src/screens/CounterScreen';
+import AdoptionScreen from './src/screens/AdoptionScreen';
+import GalleryScreen from './src/screens/GalleryScreen';
+import ThemeLayout from './src/layouts/theme-layout';
+import { ThemeContextProvider } from './src/contexts/theme-context';
 
-
-const RootStack = createNativeStackNavigator( {
+const RootStack = createNativeStackNavigator({
+  layout: ThemeLayout,
   screens: {
     Home: HomeScreen,
     About: AboutScreen,
@@ -16,8 +18,8 @@ const RootStack = createNativeStackNavigator( {
     Counter: CounterScreen,
     Adopt: AdoptionScreen,
     Gallery: GalleryScreen,
-  }
-} );
+  },
+});
 
 const Navigation = createStaticNavigation(RootStack);
 
